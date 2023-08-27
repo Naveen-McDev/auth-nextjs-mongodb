@@ -10,6 +10,7 @@ export default function SignUp() {
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const [loading, setLoading] = useState(false);
 
+  // Sign Up function
   const onSignUp = async () => {
     try {
       setLoading(true);
@@ -38,7 +39,7 @@ export default function SignUp() {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen py-2">
       <h1 className="text-3xl mb-5">{loading ? "processing" : "Sign Up"}</h1>
-
+      {/* username */}
       <input
         type="text"
         name="username"
@@ -48,7 +49,7 @@ export default function SignUp() {
         placeholder="User Name"
         className="border-[3px] border-blue-400 p-2 rounded-xl mb-3"
       />
-
+      {/* email */}
       <input
         type="email"
         name="email"
@@ -58,7 +59,7 @@ export default function SignUp() {
         placeholder="User Email"
         className="border-[3px] border-blue-400 p-2 rounded-xl mb-3"
       />
-
+      {/* password */}
       <input
         type="password"
         name="password"
@@ -68,7 +69,7 @@ export default function SignUp() {
         placeholder="User Password"
         className="border-[3px] border-blue-400 p-2 rounded-xl mb-3"
       />
-
+      {/* submit */}
       <button onClick={onSignUp} className="bg-green-300 px-5 py-2 rounded-lg">
         {buttonDisabled ? "Fill all the fields" : "Submit"}
       </button>
